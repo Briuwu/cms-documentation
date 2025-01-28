@@ -1,0 +1,8 @@
+{
+  "label": "GreekMyth CMS Overview",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "An overview of the GreekMyth CMS architecture and components."
+  }
+}

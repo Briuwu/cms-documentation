@@ -1,0 +1,8 @@
+{
+  "label": "GreekMyth Users Overview",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "An overview of the GreekMyth users. This includes the different types of users and their permissions."
+  }
+}
