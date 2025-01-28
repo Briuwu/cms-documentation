@@ -5,14 +5,12 @@ import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<"svg">>;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: "Easy to Use",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
         GreekMyth is designed to be easy to use. A social media platform that
@@ -22,7 +20,6 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Focus on What Matters",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
         GreekMyth allows users to connect with others and share their stories.
@@ -32,12 +29,9 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, description }: FeatureItem) {
   return (
     <div className={clsx("col col--6")}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>

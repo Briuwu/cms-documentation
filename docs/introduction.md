@@ -64,4 +64,4 @@ GreekMyth is an interactive platform designed for mythology enthusiasts to explo
 
 ---
 
-To get started with the GreekMyth project, please refer to the [Installation](./getting-started/installation.md) guide.
+To get started with the GreekMyth project, please refer to the [Installation](./installation.md) guide.
