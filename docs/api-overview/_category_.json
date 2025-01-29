@@ -1,0 +1,8 @@
+{
+  "label": "API Overview",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "An overview of the API architecture and components."
+  }
+}
