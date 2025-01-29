@@ -22,6 +22,7 @@ The users API provides the following endpoints:
 - `GET /api/users`: Retrieve user account information.
 - `GET /api/users/:id`: Retrieve a specific user account.
 - `DELETE /api/users/:id`: Delete a specific user account.
+- `PAGINATION /api/users`: Retrieve user account information with pagination.
 
 ### Retrieve User Account Information
 
@@ -37,6 +38,14 @@ To retrieve a specific user account, send a `GET` request to the following endpo
 
 ```http
 GET: http://localhost/finalProject_ITEC116/GreekMythApi/api/users.php?id=1
+```
+
+### Retrieve User Account Information with Pagination
+
+To retrieve user account information with pagination, send a `GET` request to the following endpoint:
+
+```http
+GET: http://localhost/finalProject_ITEC116/GreekMythApi/api/users.php?page=1&limit=10
 ```
 
 ### Delete a Specific User Account
@@ -56,8 +65,8 @@ GET /api/users.php
 ```json
 {
   "username": "DaeWae",
-  "email": "wae@gmail.com",
-  "password": "password123"
+  "password": "password123",
+  "Process": "Login"
 }
 ```
 

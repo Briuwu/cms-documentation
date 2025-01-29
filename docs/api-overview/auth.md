@@ -45,7 +45,11 @@ POST /api/auth.php
 {
   "username": "johndoe",
   "email": "johndoe@email.com",
-  "password": "password123"
+  "password": "password123",
+  "confirm_password": "password123",
+  "image": "default.jpg",
+  "Process": "Register",
+  "emailVerified": "true"
 }
 ```
 

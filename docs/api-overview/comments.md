@@ -23,6 +23,7 @@ The comments API provides the following endpoints:
 - `GET /api/comments/:id`: Retrieve a specific comment.
 - `POST /api/comments`: Create a new comment.
 - `DELETE /api/comments/:id`: Delete a specific comment.
+- `PAGINATION /api/comments`: Retrieve comment information with pagination.
 
 ### Retrieve Comment Information
 
@@ -38,6 +39,14 @@ To retrieve a specific comment, send a `GET` request to the following endpoint:
 
 ```http
 GET: http://localhost/finalProject_ITEC116/GreekMythApi/api/comments.php?id=1
+```
+
+### Retrieve Comment Information with Pagination
+
+To retrieve comment information with pagination, send a `GET` request to the following endpoint:
+
+```http
+GET: http://localhost/finalProject_ITEC116/GreekMythApi/api/comments.php?page=1&limit=10
 ```
 
 ### Delete a Specific Comment
@@ -58,10 +67,11 @@ POST: http://localhost/finalProject_ITEC116/GreekMythApi/api/comments.php
 
 The request body should contain the following parameters:
 
-- `content`: The content text.
+- `description`: The description text.
 - `user_id`: The ID of the user who posted the comment.
 - `post_id`: The ID of the post the comment is associated with.
 - `title`: The title of the post the comment is associated with.
+- `greek_image`: The image of the greek the comment is associated with.
 
 ### Example Request
 
@@ -71,10 +81,11 @@ POST /api/comments.php
 
 ```json
 {
-  "content": "This is a comment.",
+  "description": "This is a comment.",
   "user_id": "4a5f77c0-c337-11ef-864c-7c05075eb45f",
   "post_id": "4a5f77c0-c337-11ef-864c-7c05075eb45f",
-  "title": "The is a second test post"
+  "title": "The is a second test post",
+  "greek_image": "default.jpg"
 }
 ```
 

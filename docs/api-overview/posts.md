@@ -23,6 +23,7 @@ The posts API provides the following endpoints:
 - `GET /api/posts/:id`: Retrieve a specific post.
 - `POST /api/posts`: Create a new post.
 - `DELETE /api/posts/:id`: Delete a specific post.
+- `PAGINATION /api/posts`: Retrieve post information with pagination.
 
 ### Retrieve Post Information
 
@@ -38,6 +39,14 @@ To retrieve a specific post, send a `GET` request to the following endpoint:
 
 ```http
 GET: http://localhost/finalProject_ITEC116/GreekMythApi/api/posts.php?id=1
+```
+
+### Retrieve Post Information with Pagination
+
+To retrieve post information with pagination, send a `GET` request to the following endpoint:
+
+```http
+GET: http://localhost/finalProject_ITEC116/GreekMythApi/api/posts.php?page=1&limit=10
 ```
 
 ### Delete a Specific Post
@@ -59,7 +68,7 @@ POST: http://localhost/finalProject_ITEC116/GreekMythApi/api/posts.php
 The request body should contain the following parameters:
 
 - `user_id`: The ID of the user creating the post.
-- `post_id`: The ID of the post.
+- `greek`: The ID of the greek.
 - `title`: The title of the post.
 - `content`: The content of the post.
 
@@ -72,7 +81,7 @@ POST /api/posts.php
 ```json
 {
   "user_id": "1779c872-b6b9-11ef-ba98-7c05075eb45f",
-  "post_id": "9478ef85-dd16-11ef-a84b-7c05075eb45f",
+  "greek": "9478ef85-dd16-11ef-a84b-7c05075eb45f",
   "title": "Hello GreekMyth!",
   "content": "This is my first post on GreekMyth. Excited to share my thoughts with the community!"
 }

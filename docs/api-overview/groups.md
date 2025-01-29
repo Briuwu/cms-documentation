@@ -23,6 +23,7 @@ The groups API provides the following endpoints:
 - `GET /api/groups/:id`: Retrieve a specific group.
 - `POST /api/groups`: Create a new group.
 - `DELETE /api/groups/:id`: Delete a specific group.
+- `PAGINATION /api/groups`: Retrieve group information with pagination.
 
 ### Retrieve Group Information
 
@@ -38,6 +39,14 @@ To retrieve a specific group, send a `GET` request to the following endpoint:
 
 ```http
 GET: http://localhost/finalProject_ITEC116/GreekMythApi/api/groups.php?id=1
+```
+
+### Retrieve Group Information with Pagination
+
+To retrieve group information with pagination, send a `GET` request to the following endpoint:
+
+```http
+GET: http://localhost/finalProject_ITEC116/GreekMythApi/api/groups.php?page=1&limit=10
 ```
 
 ### Delete a Specific Group
