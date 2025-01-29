@@ -17,4 +17,6 @@ The **GreekMyth** project is developed by a team of dedicated students:
 - **Merino, Jeran Christopher D.** - **202102764**
 - **Millonte, Brian Laurence E.** - **202105973**
 - **Ferma, Jan Adrian D.** - **202104163**
+- **Panganiban, Nicole A.** - **202105216**
 - **Marasigan, Isaac James B.** - **202104113**
+- **Soriano, Shawn Gabriel B.** - **202104692**
