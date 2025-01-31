@@ -66,7 +66,11 @@ GET /api/users.php
 {
   "username": "DaeWae",
   "password": "password123",
-  "Process": "Login"
+  "email": "DaeWae@email.com",
+  "confirmPassword": "password123",
+  "image": "default.jpg",
+  "bio": "Hello GreekMyth!",
+  "Process": "createUser"
 }
 ```
 
