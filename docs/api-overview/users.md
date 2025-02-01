@@ -21,6 +21,8 @@ The users API provides the following endpoints:
 
 - `GET /api/users`: Retrieve user account information.
 - `GET /api/users/:id`: Retrieve a specific user account.
+- `POST /api/users`: Create a new user account.
+- `UPDATE /api/users/:id`: Update a specific user account.
 - `DELETE /api/users/:id`: Delete a specific user account.
 - `PAGINATION /api/users`: Retrieve user account information with pagination.
 
@@ -62,6 +64,14 @@ To create a new user account, send a `POST` request to the following endpoint:
 
 ```http
 POST: http://localhost/finalProject_ITEC116/GreekMythApi/api/users.php
+```
+
+### Update a Specific User Account
+
+To update a specific user account, send a `UPDATE` request to the following endpoint:
+
+```http
+UPDATE: http://localhost/finalProject_ITEC116/GreekMythApi/api/users.php?id=1
 ```
 
 The request body should contain the following parameters:
