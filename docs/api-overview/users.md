@@ -56,6 +56,24 @@ To delete a specific user account, send a `DELETE` request to the following endp
 DELETE: http://localhost/finalProject_ITEC116/GreekMythApi/api/users.php?id=1
 ```
 
+### Create a New User Account
+
+To create a new user account, send a `POST` request to the following endpoint:
+
+```http
+POST: http://localhost/finalProject_ITEC116/GreekMythApi/api/users.php
+```
+
+The request body should contain the following parameters:
+
+- `username`: The username of the user.
+- `email`: The email address of the user.
+- `password`: The password of the user.
+- `confirmPassword`: The confirmation password of the user.
+- `image`: The profile image of the user.
+- `bio`: The biography of the user.
+- `Process`: The process to be executed
+
 ### Example Request
 
 ```http
@@ -78,18 +96,7 @@ GET /api/users.php
 
 ```json
 {
-  "status": 200,
-  "message": "success",
-  "data": [
-    {
-      "user_id": "1779c872-b6b9-11ef-ba98-7c05075eb45f",
-      "username": "DaeWae",
-      "email": "wae@gmail.com",
-      "joined_at": "2024-12-10 13:39:15",
-      "profile_pic": "/finalProject_ITEC116/GreekMyth/img/u/67983d9de38740.59562269.jpg",
-      "bio": "Hello GreekMyth!",
-      "totalFriends": 3
-    }
-  ]
+  "status": 201,
+  "message": "Resource created"
 }
 ```

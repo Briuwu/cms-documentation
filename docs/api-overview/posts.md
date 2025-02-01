@@ -67,10 +67,11 @@ POST: http://localhost/finalProject_ITEC116/GreekMythApi/api/posts.php
 
 The request body should contain the following parameters:
 
-- `user_id`: The ID of the user creating the post.
-- `greek`: The ID of the greek.
 - `title`: The title of the post.
 - `content`: The content of the post.
+- `user_id`: The ID of the user creating the post.
+- `greek_id`: The ID of the Greek myth associated with the post.
+- `type`: The type of operation to be executed.
 
 ### Example Request
 
@@ -80,10 +81,11 @@ POST /api/posts.php
 
 ```json
 {
-  "user_id": "1779c872-b6b9-11ef-ba98-7c05075eb45f",
-  "greek": "9478ef85-dd16-11ef-a84b-7c05075eb45f",
-  "title": "Hello GreekMyth!",
-  "content": "This is my first post on GreekMyth. Excited to share my thoughts with the community!"
+  "title": "The Story of Zeus",
+  "content": "Zeus was the king of the gods and the god of the sky, weather, law and order, destiny and fate, and kingship. He was depicted as a regal",
+  "user_id": "1",
+  "greek_id": "1",
+  "type": "createPost"
 }
 ```
 
@@ -91,64 +93,7 @@ POST /api/posts.php
 
 ```json
 {
-  "status": 200,
-  "message": "success",
-  "data": [
-    {
-      "post_id": "9478ef85-dd16-11ef-a84b-7c05075eb45f",
-      "username": "DaeWae",
-      "title": "Hello",
-      "content": "Hello Gys",
-      "created_at": "2025-01-28 09:24:11",
-      "likes": 0,
-      "dislikes": 0,
-      "status": 1,
-      "name": "Artemis"
-    },
-    {
-      "post_id": "354e6eb4-dcbf-11ef-96dd-7c05075eb45f",
-      "username": "ChouIsOP",
-      "title": "Hello Goddsssss",
-      "content": "",
-      "created_at": "2025-01-27 22:58:46",
-      "likes": 1,
-      "dislikes": 0,
-      "status": 1,
-      "name": "Apollo"
-    },
-    {
-      "post_id": "95fa0fb6-dcb8-11ef-96dd-7c05075eb45f",
-      "username": "Administrator",
-      "title": "The is a second test post",
-      "content": "Test",
-      "created_at": "2025-01-27 22:11:22",
-      "likes": 1,
-      "dislikes": 0,
-      "status": 1,
-      "name": "Aphrodite"
-    },
-    {
-      "post_id": "95c8dc12-dcb8-11ef-96dd-7c05075eb45f",
-      "username": "Administrator",
-      "title": "The is a second test post",
-      "content": "Test",
-      "created_at": "2025-01-27 22:11:21",
-      "likes": 1,
-      "dislikes": 1,
-      "status": 1,
-      "name": "Aphrodite"
-    },
-    {
-      "post_id": "64d91674-c72a-11ef-8716-7c05075eb45f",
-      "username": "ChouIsOP",
-      "title": "asdasdasd",
-      "content": "asdsad",
-      "created_at": "2024-12-31 11:50:36",
-      "likes": 2,
-      "dislikes": 0,
-      "status": 0,
-      "name": null
-    }
-  ]
+  "status": 201,
+  "message": "Resource created"
 }
 ```

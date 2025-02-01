@@ -67,11 +67,11 @@ POST: http://localhost/finalProject_ITEC116/GreekMythApi/api/groups.php
 
 The request body should contain the following parameters:
 
-- `greek_id`: The ID of the group.
+- `creator`: The creator of the group.
 - `name`: The name of the group.
 - `description`: The description of the group.
-- `image_url`: The URL of the group image.
-- `username`: The username of the group creator.
+- `image`: The image of the group.
+- `type`: The type of operation to be performed.
 
 ### Example Request
 
@@ -81,11 +81,11 @@ POST /api/groups.php
 
 ```json
 {
-  "greek_id": "1779c872-b6b9-11ef-ba98-7c05075eb45f",
-  "name": "GreekMyth Fans",
-  "description": "A group for fans of GreekMyth!",
-  "image_url": "/finalProject_ITEC116/GreekMyth/img/g/67983d9de38740.59562269.jpg",
-  "username": "GreekMythAdmin"
+  "creator": "Default",
+  "name": "Olympian Gods",
+  "description": "The Olympian Gods are a group of twelve gods who ruled the world after the Titans. They are the principal deities of the Greek pantheon, residing atop Mount Olympus. The Olympian Gods are associated with various aspects of life, such as love, war, wisdom, and the sea.",
+  "image": "olympian_gods.jpg",
+  "type": "createComment"
 }
 ```
 
@@ -93,29 +93,7 @@ POST /api/groups.php
 
 ```json
 {
-  "status": 200,
-  "message": "success",
-  "data": [
-    {
-      "greek_id": "0db1bfad-2ba8-11ef-a131-7c05075eb45f",
-      "name": "Hermes",
-      "description": "Hermes, the quick-witted Greek god of trade, thieves, travelers, sports, athletes, and border crossings, is often portrayed as a young, athletic man wearing a winged hat and sandals. He is known for his cunning and mischievous nature, as well as his role as the messenger of the gods. Hermes is also associated with fertility, luck, and wealth, and is often depicted carrying a caduceus, a winged staff entwined with two serpents.",
-      "image_url": "/finalProject_ITEC116/GreekMyth/img/gods/HERMES.webp",
-      "creator": "Default",
-      "status": 1,
-      "username": null,
-      "total_people": 4
-    },
-    {
-      "greek_id": "1c87d062-2ba3-11ef-a131-7c05075eb45f",
-      "name": "Hades",
-      "description": "Hades, in ancient Greek religion, is the god of the underworld. He was a son of the Titans Cronus and Rhea and the brother of Zeus, Poseidon, and Hera. Hades ruled alongside his queen, Persephone, over the dead, although he was not typically a judge or responsible for torturing the guilty\u2014tasks assigned to the Furies",
-      "image_url": "/finalProject_ITEC116/GreekMyth/img/gods/HADES.webp",
-      "creator": "Default",
-      "status": 1,
-      "username": null,
-      "total_people": 4
-    }
-  ]
+  "status": 201,
+  "message": "Resource created"
 }
 ```

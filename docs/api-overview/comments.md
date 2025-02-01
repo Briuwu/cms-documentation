@@ -67,11 +67,11 @@ POST: http://localhost/finalProject_ITEC116/GreekMythApi/api/comments.php
 
 The request body should contain the following parameters:
 
-- `description`: The description text.
-- `user_id`: The ID of the user who posted the comment.
+- `user_id`: The ID of the user creating the comment.
 - `post_id`: The ID of the post the comment is associated with.
-- `title`: The title of the post the comment is associated with.
-- `greek_image`: The image of the greek the comment is associated with.
+- `parent_id`: The ID of the parent comment (if any).
+- `content`: The content of the comment.
+- `type`: The type of request (`createComment`).
 
 ### Example Request
 
@@ -81,11 +81,11 @@ POST /api/comments.php
 
 ```json
 {
-  "description": "This is a comment.",
-  "user_id": "4a5f77c0-c337-11ef-864c-7c05075eb45f",
-  "post_id": "4a5f77c0-c337-11ef-864c-7c05075eb45f",
-  "title": "The is a second test post",
-  "greek_image": "default.jpg"
+  "user_id": 1,
+  "post_id": 1,
+  "parent_id": 1,
+  "content": "This is a comment.",
+  "type": "createComment"
 }
 ```
 
@@ -93,20 +93,7 @@ POST /api/comments.php
 
 ```json
 {
-  "status": 200,
-  "message": "success",
-  "data": [
-    {
-      "comment_id": "6797a9cad05eb",
-      "title": "The is a second test post",
-      "username": "Administrator",
-      "content": "This is a comment.",
-      "created_at": "2025-01-27 22:11:22",
-      "likes": 0,
-      "dislikes": 0,
-      "status": 1,
-      "name": "Aphrodite"
-    }
-  ]
+  "status": 201,
+  "message": "Resource created"
 }
 ```

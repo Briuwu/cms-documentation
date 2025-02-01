@@ -34,6 +34,10 @@ The request body should contain the following parameters:
 - `username`: The username of the user.
 - `email`: The email address of the user.
 - `password`: The password of the user.
+- `confirm_password`: The confirmation password of the user.
+- `image`: The profile image of the user.
+- `Process`: The process to be executed
+- `emailVerified`: The email verification status of the user.
 
 ### Example Request
 
@@ -57,13 +61,7 @@ POST /api/auth.php
 
 ```json
 {
-  "status": 200,
-  "message": "Logged in as ZenZen!",
-  "data": {
-    "token": "2a58abbc03adcf08dc778920860933dbecd347b0f3483ba54dca1e71b32dd4f0",
-    "user_id": "4a5f77c0-c337-11ef-864c-7c05075eb45f",
-    "theme": 1,
-    "font_style": "fonts2"
-  }
+  "status": 201,
+  "message": "Resource created"
 }
 ```
