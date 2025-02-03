@@ -85,7 +85,7 @@ POST /api/groups.php
   "name": "Olympian Gods",
   "description": "The Olympian Gods are a group of twelve gods who ruled the world after the Titans. They are the principal deities of the Greek pantheon, residing atop Mount Olympus. The Olympian Gods are associated with various aspects of life, such as love, war, wisdom, and the sea.",
   "image": "olympian_gods.jpg",
-  "type": "createComment"
+  "type": "createGroup"
 }
 ```
 
